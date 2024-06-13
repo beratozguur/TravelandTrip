@@ -1,0 +1,24 @@
+﻿@using TravelTrip.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Fotograflar";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h2>Gezilerden Fotoğraflar</h2>
+<div style="display: flex; justify-content: center; margin-bottom:50px;">
+
+
+    <div class="header_bottom_right_images">
+
+        <div class="slider" style="width:560px; height:368px;">
+            <ul class="rslides" id="slider1">
+                @foreach (var x in Model)
+                {
+                    <li><img src="@x.BlogImage" alt=""></li>
+                }
+            </ul>
+        </div>
+    </div>
+
+</div>

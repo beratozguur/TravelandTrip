@@ -1,0 +1,35 @@
+﻿@using TravelTrip.Models.Sınıflar
+@model List<iletisim>
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div style="text-align: center; margin-bottom:5px;">
+    <img src="https://i.hizliresim.com/oyoapoq.jpg" style="height:340px; width:570px; margin-top:45px;" />
+</div>
+
+<div class="col-md-4 side-content" style="margin-top:60px;">
+    <div class="container" style="margin-top:80px;">
+
+
+        @foreach (var x in Model)
+        {
+            <ul class="single-grid" style="margin-top:2px; margin-bottom:46px;  text-align:center;">
+                <li class="list" style="margin-top:10px;">
+
+                    <a href="/Default/Iletisim/@x.ID">@x.AdSoyad</a><br />
+                    <a href="/Default/Iletisim/@x.ID">@x.Mail</a><br />
+                    <a href="/Default/Iletisim/@x.ID">@x.Konu</a><br />
+                    <a href="/Default/Iletisim/@x.ID">@x.Mesaj</a>
+
+
+
+                </li>
+            </ul>
+
+        }
+    </div>
+
+</div>
